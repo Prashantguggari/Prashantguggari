@@ -3,6 +3,8 @@ package com.sgtesting.actitime.driverscript;
 import java.lang.reflect.Method;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 import com.sgtesting.actitime.datatable.Datatable;
 import com.sgtesting.actitime.tests.Initialize;
@@ -13,12 +15,47 @@ public class DriverScript {
 	public static String strPath=null;
 	public static Datatable datatable=null;
 	public static String testscriptexcelfile=null;
-	public static void main(String[] args) {
-		
+	
+	/**
+	 * Testcase ID:
+	 * Testcase Name:
+	 * Created By:
+	 * Reviewed By:
+	 * Reviewed Date:
+	 * Return Value
+	 * Parameters:
+	 * Purpose:
+	 * Description:
+	 */
+	@BeforeClass
+	public void loadFiles()
+	{
 		try
 		{
 			datatable =new Datatable();
 			strPath=System.getProperty("user.dir");
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * Testcase ID:
+	 * Testcase Name:
+	 * Created By:
+	 * Reviewed By:
+	 * Reviewed Date:
+	 * Return Value
+	 * Parameters:
+	 * Purpose:
+	 * Description:
+	 */
+	@Test
+	public void executeTestScenarios()
+	{
+		try
+		{
 			controllerFile=strPath+"\\Controller\\data_Controller.xlsx";
 			int controllerRowCount=datatable.rowCount(controllerFile, "Scenarios");
 			for(int tcid=0;tcid<controllerRowCount;tcid++)
@@ -66,7 +103,6 @@ public class DriverScript {
 		{
 			e.printStackTrace();
 		}
-
 	}
 
 }
