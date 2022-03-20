@@ -2,6 +2,7 @@ package com.sgtesting.actitime.datatable;
 
 import java.io.FileInputStream;
 import java.util.Calendar;
+
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.DateUtil;
@@ -13,112 +14,120 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class Datatable {
 	public static Workbook wb=null;
 	/**
+	 * Testcase ID:
+	 * Testcase Name:
 	 * Created By:
-	 * Modified By:
 	 * Reviewed By:
-	 * Test Case ID:
-	 * @Parameters :
-	 * @return :
+	 * Reviewed Date:
+	 * Return Value
+	 * Parameters:
 	 * Purpose:
 	 * Description:
 	 */
-	public int rowCount(String fileName,String sheetName)
+	public int rowCount(String filename,String sheetname)
 	{
-		FileInputStream fin=null;
 		Workbook wb=null;
 		Sheet sh=null;
-		int rc=0;
+		FileInputStream fin=null;
+		int rowcount=0;
 		try
 		{
-			fin=new FileInputStream(fileName);
+			fin=new FileInputStream(filename);
 			wb=new XSSFWorkbook(fin);
-			sh=wb.getSheet(sheetName);
+			sh=wb.getSheet(sheetname);
 			if(sh==null)
 			{
-				return -1;
+				rowcount=-1;
 			}
-			rc=sh.getPhysicalNumberOfRows();
+			rowcount=sh.getPhysicalNumberOfRows();
 		}catch(Exception e)
 		{
 			e.printStackTrace();
-		}finally
+		}
+		finally
 		{
 			try
 			{
 				fin.close();
 				wb.close();
+				sh=null;
 			}catch(Exception e)
 			{
 				e.printStackTrace();
 			}
 		}
-		return rc-1;
+		return rowcount-1;
 	}
 	
-	
 	/**
+	 * Testcase ID:
+	 * Testcase Name:
 	 * Created By:
-	 * Modified By:
 	 * Reviewed By:
-	 * Test Case ID:
-	 * @Parameters :
-	 * @return :
+	 * Reviewed Date:
+	 * Return Value
+	 * Parameters:
 	 * Purpose:
 	 * Description:
 	 */
-	public boolean importExcelFile(String fileName)
-	{
-		FileInputStream fin=null;
-		try
-		{
-			fin=new FileInputStream(fileName);
-			wb=new XSSFWorkbook(fin);
-			if(wb==null)
-			{
-				return false;
-			}
-		}catch(Exception e)
-		{
-			e.printStackTrace();
-		}
-		return true;
-	}
-
-	/**
-	 * Created By:
-	 * Modified By:
-	 * Reviewed By:
-	 * Test Case ID:
-	 * @Parameters :
-	 * @return :
-	 * Purpose:
-	 * Description:
-	 */
-	public int rowCount(String sheetName)
+	public int rowCount(String sheetname)
 	{
 		Sheet sh=null;
-		int rc=0;
+		FileInputStream fin=null;
+		int rowcount=0;
 		try
 		{
-			sh=wb.getSheet(sheetName);
+			sh=wb.getSheet(sheetname);
 			if(sh==null)
 			{
-				return -1;
+				rowcount=-1;
 			}
-			rc=sh.getPhysicalNumberOfRows();
+			rowcount=sh.getPhysicalNumberOfRows();
 		}catch(Exception e)
 		{
 			e.printStackTrace();
 		}
-		return rc-1;
+		return rowcount-1;
 	}
+	
 	/**
+	 * Testcase ID:
+	 * Testcase Name:
 	 * Created By:
-	 * Modified By:
 	 * Reviewed By:
-	 * Test Case ID:
-	 * @Parameters :
-	 * @return :
+	 * Reviewed Date:
+	 * Return Value
+	 * Parameters:
+	 * Purpose:
+	 * Description:
+	 */
+	public boolean importExcelFile(String filename)
+	{
+		FileInputStream fin=null;
+		boolean isStatus=false;
+		try
+		{
+			fin=new FileInputStream(filename);
+			wb=new XSSFWorkbook(fin);
+			if(wb!=null)
+			{
+				isStatus=true;
+			}
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return isStatus;
+	}
+	
+	/**
+	 * Testcase ID:
+	 * Testcase Name:
+	 * Created By:
+	 * Reviewed By:
+	 * Reviewed Date:
+	 * Return Value
+	 * Parameters:
 	 * Purpose:
 	 * Description:
 	 */
@@ -202,12 +211,13 @@ public class Datatable {
 	}
 	
 	/**
+	 * Testcase ID:
+	 * Testcase Name:
 	 * Created By:
-	 * Modified By:
 	 * Reviewed By:
-	 * Test Case ID:
-	 * @Parameters :
-	 * @return :
+	 * Reviewed Date:
+	 * Return Value
+	 * Parameters:
 	 * Purpose:
 	 * Description:
 	 */
@@ -272,7 +282,15 @@ public class Datatable {
 		{
 			e.printStackTrace();
 		}
+		
 		return strCellData;
 	}
-	
+	public static void main(String[] args) {
+		Datatable o=new Datatable();
+		String strPath=System.getProperty("user.dir");
+		String filename=strPath+"\\Controller\\data_Controller.xlsx";
+		String data=o.getCellData(filename, "Scenarios", "TestcaseName", 5);
+		System.out.println(data);
+	}
+
 }

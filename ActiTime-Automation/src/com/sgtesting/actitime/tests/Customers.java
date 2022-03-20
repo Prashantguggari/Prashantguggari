@@ -1,22 +1,18 @@
 package com.sgtesting.actitime.tests;
 
-import org.openqa.selenium.WebDriver;
-
 public class Customers {
 	
-	
 	/**
-	 * Testcase ID:
-	 * Testcase Name:
 	 * Created By:
+	 * Created Date:
 	 * Reviewed By:
-	 * Reviewed Date:
-	 * Return Value
-	 * Parameters:
+	 * Test case ID:
+	 * parameters:
+	 * return type:
 	 * Purpose:
 	 * Description:
 	 */
-	public static void createCustomer(WebDriver oBrowser)
+	public static void createCustomer()
 	{
 		try
 		{
@@ -28,17 +24,16 @@ public class Customers {
 	}
 	
 	/**
-	 * Testcase ID:
-	 * Testcase Name:
 	 * Created By:
+	 * Created Date:
 	 * Reviewed By:
-	 * Reviewed Date:
-	 * Return Value
-	 * Parameters:
+	 * Test case ID:
+	 * parameters:
+	 * return type:
 	 * Purpose:
 	 * Description:
 	 */
-	public static void modifyCustomer(WebDriver oBrowser)
+	public static void modifyCustomer()
 	{
 		try
 		{
@@ -50,17 +45,16 @@ public class Customers {
 	}
 	
 	/**
-	 * Testcase ID:
-	 * Testcase Name:
 	 * Created By:
+	 * Created Date:
 	 * Reviewed By:
-	 * Reviewed Date:
-	 * Return Value
-	 * Parameters:
+	 * Test case ID:
+	 * parameters:
+	 * return type:
 	 * Purpose:
 	 * Description:
 	 */
-	public static void deleteCustomer(WebDriver oBrowser)
+	public static void deleteCustomer()
 	{
 		try
 		{
