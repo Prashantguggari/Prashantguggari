@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-03-21T12:35:19 IST" name="tests" finished-at="2022-03-21T12:35:19 IST" duration-ms="107">
+    <groups>
+    </groups>
+    <test started-at="2022-03-21T12:35:19 IST" name="Users and Products" finished-at="2022-03-21T12:35:19 IST" duration-ms="107">
+      <class name="com.sgtesting.tests.Users">
+        <test-method signature="createUser()[pri:0, instance:com.sgtesting.tests.Users@5f16132a]" started-at="2022-03-21T12:35:19 IST" name="createUser" finished-at="2022-03-21T12:35:19 IST" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createUser -->
+        <test-method signature="deleteUser()[pri:0, instance:com.sgtesting.tests.Users@5f16132a]" started-at="2022-03-21T12:35:19 IST" name="deleteUser" finished-at="2022-03-21T12:35:19 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteUser -->
+        <test-method signature="modifyUser()[pri:0, instance:com.sgtesting.tests.Users@5f16132a]" started-at="2022-03-21T12:35:19 IST" name="modifyUser" finished-at="2022-03-21T12:35:19 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- modifyUser -->
+      </class> <!-- com.sgtesting.tests.Users -->
+      <class name="com.sgtesting.tests.Products">
+        <test-method signature="createProduct()[pri:0, instance:com.sgtesting.tests.Products@44a7bfbc]" started-at="2022-03-21T12:35:19 IST" name="createProduct" finished-at="2022-03-21T12:35:19 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProduct -->
+        <test-method signature="deleteProduct()[pri:0, instance:com.sgtesting.tests.Products@44a7bfbc]" started-at="2022-03-21T12:35:19 IST" name="deleteProduct" finished-at="2022-03-21T12:35:19 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteProduct -->
+        <test-method signature="modifyProduct()[pri:0, instance:com.sgtesting.tests.Products@44a7bfbc]" started-at="2022-03-21T12:35:19 IST" name="modifyProduct" finished-at="2022-03-21T12:35:19 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- modifyProduct -->
+      </class> <!-- com.sgtesting.tests.Products -->
+    </test> <!-- Users and Products -->
+  </suite> <!-- tests -->
+</testng-results>
